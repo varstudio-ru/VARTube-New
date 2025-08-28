@@ -25,14 +25,14 @@ namespace VARTube.UI.ScreenManager
         public async UniTask Open(int screenIndex, params object[] customData)
         {
             //TODO: feature request for ScreenManager
-            var screenContext = Screens[screenIndex].GameObject.GetComponent<IScreenContext>();
-            if (screenContext != null)
-            {
-                var context = new ScreenContext(this, customData);
-                screenContext.SetContext(context);
-            }
+            //var screenContext = Screens[screenIndex].GameObject.GetComponent<IScreenContext>();
+            //if (screenContext != null)
+            //{
+            //    var context = new ScreenContext(this, customData);
+            //    screenContext.SetContext(context);
+            //}
 
-            await ScreenManager.OpenAsync(Screens[screenIndex]);
+            //await ScreenManager.OpenAsync(Screens[screenIndex]);
         }
 
         //TODO: feature request - call screen by type

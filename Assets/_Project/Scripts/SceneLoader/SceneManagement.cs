@@ -1,24 +1,26 @@
 using Cysharp.Threading.Tasks;
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace VARTube.Utils
 {
-    public interface ISceneManagement
+    public class SceneManagement
     {
-        Scene GetActiveScene();
-        ISceneContent GetSceneContent(Scene scene);
-        ISceneContent GetSceneContent(string sceneName);
-        UniTask<Scene> LoadAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Additive, bool setActive = true);
-        void SetActiveScene(string name);
-        UniTask UnloadAsync(Scene scene, int delay = 0);
-        UniTask UnloadAsync(string sceneName, int delay = 0);
-    }
+        private static List<string> availableScenes = new();
 
-    public class SceneManagement : ISceneManagement
-    {
+        static SceneManagement()
+        {
+            for(int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+            {
+                string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+                availableScenes.Add(Path.GetFileNameWithoutExtension(scenePath));
+            }
+        }
+        
         public ISceneContent GetSceneContent(Scene scene)
         {
             ValidateScene(scene);
@@ -48,21 +50,16 @@ namespace VARTube.Utils
 
         public async UniTask<Scene> LoadAsync(string sceneName, LoadSceneMode mode = LoadSceneMode.Additive, bool setActive = true)
         {
-            Scene scene;
+            string tabletSceneName = sceneName + "Tablet";
+            string targetSceneName = sceneName;
             if(Device.GetDeviceType() == Device.Type.TABLET)
             {
-                scene = SceneManager.GetSceneByName(sceneName + "Tablet");
-                if(!scene.IsValid())
-                    scene = SceneManager.GetSceneByName(sceneName);
+                if(availableScenes.Contains(tabletSceneName))
+                    targetSceneName = tabletSceneName;
             }
-            else
+            Scene scene = SceneManager.GetSceneByName(targetSceneName);
+            if(!scene.isLoaded)
             {
-                scene = SceneManager.GetSceneByName(sceneName);
-            }
-            if (!scene.isLoaded)
-            {
-                string targetSceneName = sceneName;
-           
                 AsyncOperation sceneLoadOperation = SceneManager.LoadSceneAsync(targetSceneName, mode);
                 if(sceneLoadOperation == null)
                 {
@@ -72,11 +69,6 @@ namespace VARTube.Utils
                 await sceneLoadOperation.ToUniTask();
                 scene = SceneManager.GetSceneByName(targetSceneName);
             }
-            //else if (!scene.IsValid())
-            //{
-            //    Debug.LogError($"Scene {name} is not valid");
-            //    return default;
-            //}
 
             if (setActive)
             {
