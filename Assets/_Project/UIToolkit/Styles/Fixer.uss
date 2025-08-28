@@ -1,0 +1,3 @@
+VARTube.UI.Components.Button:disabled {
+      opacity: 1;
+}

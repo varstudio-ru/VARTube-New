@@ -1,0 +1,74 @@
+{
+    "name": "VartubeInputActions",
+    "maps": [
+        {
+            "name": "Touchscreen",
+            "id": "63c575a7-9799-4932-bf52-53dd5a32eb36",
+            "actions": [
+                {
+                    "name": "Pinch",
+                    "type": "Value",
+                    "id": "f42a337d-20f8-4ecd-92b2-6b6689af496a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Pan",
+                    "type": "Value",
+                    "id": "eacdd02a-d1c4-4ae8-b319-d58960948821",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotate",
+                    "type": "Value",
+                    "id": "e0f64103-3748-43b5-be8c-ed7f6be38ef8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cc36afd6-2c00-4fd6-9e5e-b60046286b04",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pinch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c3127e1-fe8d-43d6-8bd8-8eb641853358",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pan",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a06c0b10-a186-476c-ac29-7cc221fa5b61",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

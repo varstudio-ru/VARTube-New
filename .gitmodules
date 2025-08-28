@@ -1,0 +1,3 @@
+[submodule "Packages/ru.varstudio.vartube.core"]
+	path = Packages/ru.varstudio.vartube.core
+	url = git@github.com:varstudio-ru/VARTubeCore.git

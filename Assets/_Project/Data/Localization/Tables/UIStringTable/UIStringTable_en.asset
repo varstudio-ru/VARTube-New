@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UIStringTable_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 24605e230a2ee8441aafb49e4c7f6826, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 3302412429671530587
+  m_TableData:
+  - m_Id: 947359727616
+    m_Localized: Login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5588554235904
+    m_Localized: Username
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6217972465664
+    m_Localized: Password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6914579251200
+    m_Localized: Logout
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17700487839744
+    m_Localized: Input login and password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21574472843264
+    m_Localized: Invalid username or password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21601949728768
+    m_Localized: 'Error: {0:ErrorText}'
+    m_Metadata:
+      m_Items:
+      - rid: 3302412429671530587
+  references:
+    version: 2
+    RefIds:
+    - rid: 3302412429671530587
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00408a98a5130000

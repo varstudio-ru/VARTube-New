@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: b55505f24a50f0b438b34fb1b9fe17b7
+  m_SerializeEntries:
+  - m_GUID: 0473fc235f836084f9941e4453a29d4d
+    m_Address: Assets/_Project/Data/Localization/Tables/ErrorStringTable/ErrorStringTable
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0efaaf3b08840c945b3b220646cff5d5
+    m_Address: Packages/ru.varstudio.vartube.core/Runtime/Data/Localization/Tables/GameStringTable/GameStringTable
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24605e230a2ee8441aafb49e4c7f6826
+    m_Address: Assets/_Project/Data/Localization/Tables/UIStringTable/UIStringTable
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f65e9da18681c864d9a92a0e58a40449
+    m_Address: Assets/_Project/Data/Localization/Tables/AssetTableCollection01/AssetTableCollection01
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 537be44675ee08b4398e44aa765f7bc6, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 75a70fcb1a001de4b9b8a9c545fe9dd1, type: 2}
+    - {fileID: 11400000, guid: 8beb4e0d01eb77948a76e2e51c143095, type: 2}

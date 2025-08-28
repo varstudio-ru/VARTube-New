@@ -1,0 +1,117 @@
+.bg-transparent {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.bg-gray-950 {
+	background-color: #030712;
+}
+
+.bg-white {
+	background-color: #FFFFFF;
+}
+
+.hover_bg-gray-900:hover {
+	background-color: #111827;
+}
+
+.hover_bg-blue-50:hover {
+	background-color: #EFF6FF;
+}
+
+.disabled_bg-gray-950:disabled {
+	background-color: #030712;
+}
+
+.border-blue-600 {
+	border-color: #2563EB;
+}
+
+.rounded-lg {
+	border-radius: 8px;
+}
+
+.border {
+	border-width: 1px;
+}
+
+.flex {
+	display: flex;
+}
+
+.hidden {
+	display: none;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.font-medium {
+	-unity-font-definition: url("project:///Assets/_Project/Fonts/Open Sans/OpenSans-Medium.ttf");
+}
+
+.text-lg {
+	font-size: 18px;
+}
+
+.p-4 {
+	padding: 16px;
+}
+
+.px-4 {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.py-6 {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+.text-center {
+	-unity-text-align: middle-center;
+}
+
+.text-blue-600 {
+	color: #2563EB;
+}
+
+.text-white {
+	color: #FFFFFF;
+}
+
+.disabled_text-gray-800:disabled {
+	color: #1F2937;
+}
+
+.transition-duration-200 {
+	transition-duration: 200ms;
+}
+
+.transition {
+	transition-property: background-color, border-color, color, fill, -unity-background-image-tint-color, -unity-text-outline-color, box-shadow, opacity, scale, rotate, translate, transform-origin;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.transform {
+	--zb-translate-x: 0;
+	--zb-translate-y: 0;
+	--zb-rotate: 0;
+	--zb-scale-x: 1;
+	--zb-scale-y: 1;
+	translate: var(--zb-translate-x) var(--zb-translate-y);
+	rotate: var(--zb-rotate);
+	scale: var(--zb-scale-x) var(--zb-scale-y);
+}
+

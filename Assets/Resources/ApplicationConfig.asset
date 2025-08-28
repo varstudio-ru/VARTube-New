@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c695cc9fd90f39f4f9ece9d49cfd075d, type: 3}
+  m_Name: ApplicationConfig
+  m_EditorClassIdentifier: 
+  Network:
+    BaseUrl: https://api.system123.ru
+    IdentityUrl: https://identity.system123.ru/token
+  Authorization:
+    DefaultLogin: NoAuthorizeUser
+    DefaultPassword: Xcwg7RnD
+    DefaultCompanyId: 66
+  Localization:
+    UIStringTable:
+      m_TableReference:
+        m_TableCollectionName: GUID:24605e230a2ee8441aafb49e4c7f6826
+    ErrorStringTable:
+      m_TableReference:
+        m_TableCollectionName: GUID:0473fc235f836084f9941e4453a29d4d
+    GameStringTable:
+      m_TableReference:
+        m_TableCollectionName: GUID:0473fc235f836084f9941e4453a29d4d
+  ProductBuilder:
+    ElementPrefab: {fileID: 978451064089865792, guid: 4cc6e1489af83374d9c2d58e9204fbfa, type: 3}
+    GroupPrefab: {fileID: 4416660312856004921, guid: 2b45602171bf32b4b8c7a8bb6cbabf91, type: 3}
+    SceneSettings:
+      SlotMaterial: {fileID: 0}
+      SlotIndentMaterial: {fileID: 0}
+      DefaultMaterial: {fileID: 2100000, guid: 775325e71c61b5e4e8b2c6d2824bb066, type: 2}
+      DefaultTransparentMaterial: {fileID: 2100000, guid: 14e8a3bb213f5f54ebcfc330bd6ba6d9, type: 2}
+      DefaultTransparentCutoutMaterial: {fileID: 2100000, guid: f7a4afc18f3f7d848a940ebd3883412b, type: 2}
+      ShadowMaterial: {fileID: 2100000, guid: 24cf029360f3bf64aa4697f7e2ebeed8, type: 2}
+      ShadowPlane: {fileID: 0}
+      CameraModifier: {fileID: 0}
+      SphereCameraModifier: {fileID: 0}
+      SquareShadow: {fileID: 0}
+      RoundShadow: {fileID: 0}
+      ShadowError: {fileID: 0}
+    EnableLogging: 0
+  GraphicsSettings:
+    PostProcessVolume: {fileID: 11400000, guid: 188a54d9560d813469180c206a4498b9, type: 2}
+    URPFutures: []
+    URPSettings: {fileID: 11400000, guid: 5e6cbd92db86f4b18aec3ed561671858, type: 2}
+  IIKDebugLevel: 0
+  Scenes:
+    Root: Root
+    ARShowroom: ARShowroom
+    ThreeDShowroom: 3DShowroom
+    FakeARShowroom: FakeARShowroom
+    MainMenu: MainMenu
+  ProductCamera:
+    ProductCamera: {fileID: 7413572632322550346, guid: 5b6c9fa984816db40b02508af630c30a, type: 3}
+    FakeARCamera: {fileID: 2472067506671550329, guid: 736eceb17c5af4a77aae1cdf4b666fc9, type: 3}
+    Cameras:
+    - Platform: 7
+      Settings:
+        Rotation:
+          Multiplier: {x: 0.1, y: 0.1, z: 0}
+          Min: {x: -89, y: -Infinity, z: 0}
+          Max: {x: 89, y: Infinity, z: 0}
+          Initial: {x: 20, y: -155, z: 0}
+        Translation:
+          Multiplier: {x: 0.001, y: 0.001, z: 0.001}
+          Min: {x: -Infinity, y: -Infinity, z: -Infinity}
+          Max: {x: Infinity, y: Infinity, z: Infinity}
+          Initial: {x: 0, y: 0, z: 0}
+        Zoom:
+          Multiplier: 0.01
+          Min: 0.1
+          Max: 20
+          Initial: 10
+    - Platform: 11
+      Settings:
+        Rotation:
+          Multiplier: {x: 0.2, y: 0.2, z: 0}
+          Min: {x: -89, y: -Infinity, z: 0}
+          Max: {x: 89, y: Infinity, z: 0}
+          Initial: {x: 20, y: -155, z: 0}
+        Translation:
+          Multiplier: {x: 0.0005, y: 0.0005, z: 0.0005}
+          Min: {x: -Infinity, y: -Infinity, z: -Infinity}
+          Max: {x: Infinity, y: Infinity, z: Infinity}
+          Initial: {x: 0, y: 0, z: 0}
+        Zoom:
+          Multiplier: 0.001
+          Min: 0.1
+          Max: 20
+          Initial: 10
+    - Platform: 8
+      Settings:
+        Rotation:
+          Multiplier: {x: 0.1, y: 0.1, z: 0}
+          Min: {x: -89, y: -Infinity, z: 0}
+          Max: {x: 89, y: Infinity, z: 0}
+          Initial: {x: 20, y: -155, z: 0}
+        Translation:
+          Multiplier: {x: 0.0005, y: 0.0005, z: 0.0005}
+          Min: {x: -Infinity, y: -Infinity, z: -Infinity}
+          Max: {x: Infinity, y: Infinity, z: Infinity}
+          Initial: {x: 0, y: 0, z: 0}
+        Zoom:
+          Multiplier: 0.001
+          Min: 0.1
+          Max: 20
+          Initial: 10
+    - Platform: 0
+      Settings:
+        Rotation:
+          Multiplier: {x: 0.1, y: 0.1, z: 0}
+          Min: {x: -89, y: -Infinity, z: 0}
+          Max: {x: 89, y: Infinity, z: 0}
+          Initial: {x: 20, y: -155, z: 0}
+        Translation:
+          Multiplier: {x: 0.0005, y: 0.0005, z: 0.0005}
+          Min: {x: -Infinity, y: -Infinity, z: -Infinity}
+          Max: {x: Infinity, y: Infinity, z: Infinity}
+          Initial: {x: 0, y: 0, z: 0}
+        Zoom:
+          Multiplier: 0.001
+          Min: 0.1
+          Max: 20
+          Initial: 10
+  ScreenCaptureFile:
+    PrefixName: VARTube_Screenshot_
+    DateFormat: yyyy-MM-dd_HH-mm-ss-fff
+    ExtensionName: .png
+    FolderName: VARTubeScreenshots
+  ShadowPlaneMaterial: {fileID: 2100000, guid: 0eab36dbed8512743bee43c8cb936fac, type: 2}

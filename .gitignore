@@ -1,0 +1,123 @@
+# ====================================================
+# Unity Generated Files and Folders
+# ====================================================
+# Temporary files and build artifacts
+.utmp/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Bb]uildRemote/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+
+# Unity Addressables (packed addressable assets)
+# NOTE: Do not remove .meta files – they are required by Unity!
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/**/*.bin*
+
+# Unity-generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+
+# Specific Unity assets or folders to ignore
+/[Aa]ssets/[Ss]treamingAssets/build_info*
+/[Aa]ssets/_Project/Dynamic Assets/
+/[Aa]ssets/AddressableAssetsData/link.xml
+/[Aa]ssets/AddressableAssetsData/link.xml.meta
+
+# Custom Unity ignore rules
+[Rr]ecordings/
+[Oo]ther[Rr]esources/
+[Uu]nityGenerated/
+[Ll]ocal[Cc]ache/
+
+
+# ====================================================
+# Build Artifacts
+# ====================================================
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app  # Unity package files
+
+
+# ====================================================
+# IDE-Specific Files
+# ====================================================
+# Visual Studio / MonoDevelop generated files
+[Ee]xported[Oo]bj/
+.consulo/
+*.csproj
+*.csproj.meta
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.vsconfig
+
+# (MonoDevelop/Xamarin Studio user-specific files)
+*.userprefs 
+
+# Visual Studio cache directories
+.vs/
+.vscode/
+
+# Gradle cache directory
+.gradle/
+
+# JetBrains Rider generated files
+/[Aa]ssets/Plugins/Editor/JetBrains*
+/[Aa]ssets/Plugins/Editor.meta
+
+
+# ====================================================
+# OS-Generated Files
+# ====================================================
+# macOS
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Windows
+[Tt]humbs.db
+
+
+# ====================================================
+# Large Media Files
+# ====================================================
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+
+# ====================================================
+# Crashlytics and Other Tools
+# ====================================================
+crashlytics-build.properties
+README.pdf
+README.pdf.meta
+.idea/
+Test/
+/Assets/Vuplex/WebView/Standalone/Mac
+Assets/Vuplex/WebView/Standalone/Mac.meta
+Assets/Resources/Info.meta
+Assets/Resources/Info
+Captures

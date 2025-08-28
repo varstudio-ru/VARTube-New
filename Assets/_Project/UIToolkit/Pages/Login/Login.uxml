@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" class="bg-white p-4 items-center" style="flex-grow: 1;">
+        <VARTube.UI.Components.AutoLayout gap="4" wrap="false" name="Container" style="max-width: 390px;">
+            <ui:VisualElement name="Space" class="p-8 m-0" />
+            <VARTube.UI.Components.AutoLayout gap="1" name="Container">
+                <ui:Label text="Авторизация" name="Header" class="text-3xl font-bold" />
+                <ui:Label text="Добро пожаловать, введите ваши данные для входа и заходите скорее😊" name="Text" class="whitespace-normal text-gray-400" />
+            </VARTube.UI.Components.AutoLayout>
+            <VARTube.UI.Components.AutoLayout gap="2" name="Container">
+                <VARTube.UI.Components.FormStatus title="Ошибка авторизации" text="Проверьте что ввели всё правильно" name="status" />
+                <VARTube.UI.Components.Input placeholder-text="Имя пользователя" name="username" style="color: rgb(163, 163, 163);" />
+                <VARTube.UI.Components.Input password="true" placeholder-text="Пароль" name="password" />
+            </VARTube.UI.Components.AutoLayout>
+            <VARTube.UI.Components.Button text="Войти" enabled="false" name="submit" style="bottom: 0; position: relative;" />
+        </VARTube.UI.Components.AutoLayout>
+    </ui:VisualElement>
+</ui:UXML>
