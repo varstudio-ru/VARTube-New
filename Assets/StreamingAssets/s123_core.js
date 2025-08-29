@@ -6871,8 +6871,10 @@ var GraphInputType = graph_1.Graph.GraphInputType;
 var GraphOutputType = graph_1.Graph.GraphOutputType;
 const math_1 = __webpack_require__(/*! ./math */ "./src/math.ts");
 const utils_1 = __webpack_require__(/*! ./utils */ "./src/utils.ts");
+const material_1 = __webpack_require__(/*! ./material */ "./src/material.ts");
 var IIK;
 (function (IIK) {
+    var Material = material_1.MaterialCore.Material;
     class IIKCore {
         //TODO
         //public async PrefetchResources(done?: () => void): Promise<void> {
@@ -8438,6 +8440,14 @@ var IIK;
             logger_1.Logger.Log("Попытка получить незаданную точку", DebugLevel.ERROR);
             return result;
         }
+        GetMaterialData(guidOrUrl) {
+            return __awaiter(this, void 0, void 0, function* () {
+                let targetUrl = guidOrUrl;
+                if (!targetUrl.startsWith("s123://") && !targetUrl.startsWith("s123mat://"))
+                    targetUrl = "s123mat://" + targetUrl;
+                return Material.GetByDirectLink(targetUrl, this.project.guid);
+            });
+        }
         Invoke(event_name, value) {
             return __awaiter(this, void 0, void 0, function* () {
                 const event = this.project.graph.nodes.find(function (node) {
@@ -8479,7 +8489,7 @@ var IIK;
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.Graph = exports.MaterialCore = exports.Filesystem = exports.Logger = exports.Generator = exports.IIK = void 0;
+exports.ProductFactory = exports.ProjectFactory = exports.Graph = exports.MaterialCore = exports.Filesystem = exports.Logger = exports.Generator = exports.IIK = void 0;
 const iik_1 = __webpack_require__(/*! ./iik */ "./src/iik.ts");
 Object.defineProperty(exports, "IIK", ({ enumerable: true, get: function () { return iik_1.IIK; } }));
 const generator_1 = __webpack_require__(/*! ./MeshUtils/generator */ "./src/MeshUtils/generator.ts");
@@ -8492,6 +8502,10 @@ const material_1 = __webpack_require__(/*! ./material */ "./src/material.ts");
 Object.defineProperty(exports, "MaterialCore", ({ enumerable: true, get: function () { return material_1.MaterialCore; } }));
 const graph_1 = __webpack_require__(/*! ./graph */ "./src/graph.ts");
 Object.defineProperty(exports, "Graph", ({ enumerable: true, get: function () { return graph_1.Graph; } }));
+const project_1 = __webpack_require__(/*! ./Project/DTOs/project */ "./src/Project/DTOs/project.ts");
+Object.defineProperty(exports, "ProjectFactory", ({ enumerable: true, get: function () { return project_1.ProjectFactory; } }));
+const product_1 = __webpack_require__(/*! ./Product/product */ "./src/Product/product.ts");
+Object.defineProperty(exports, "ProductFactory", ({ enumerable: true, get: function () { return product_1.ProductFactory; } }));
 
 
 /***/ }),
