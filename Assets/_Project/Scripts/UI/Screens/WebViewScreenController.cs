@@ -7,6 +7,7 @@ using VARTube.Core.Services;
 using VARTube.Network;
 using VARTube.Network.Models;
 using VARTube.UI.ScreenManager;
+using VARTube.Utils;
 using VARTube.WebView2DZone;
 using static VARTube.WebView2DZone.Browser2DZoneController;
 
@@ -23,6 +24,7 @@ namespace VARTube.UI
         private ScreenContext _screenContext;
         private MainMenuScreenManager _mainMenuScreenManager;
         private LoadingScreen _loadingScreen;
+        private DisplayUtils _displayUtilsService;
 
         public void SetContext(ScreenContext context)
         {
@@ -43,7 +45,7 @@ namespace VARTube.UI
         {
             _controller.Show();
 
-            if (_controller.CurrentStatus==Status.Loaded)
+            if (_controller.CurrentStatus == Status.Loaded)
                 _loadingScreen.gameObject.SetActive(false);
         }
 
@@ -60,8 +62,10 @@ namespace VARTube.UI
             _productEnvironmentManager = ApplicationServices.GetService<ProductEnvironmentManager>();
             _authorizationService = ApplicationServices.GetService<AuthorizationService>();
             _authorizationStateService = ApplicationServices.GetService<AuthorizationStateService>();
-            //_mainMenuScreenManager = ApplicationServices.GetService<MainMenuScreenManager>();
+            _displayUtilsService = ApplicationServices.GetService<DisplayUtils>();
             _loadingScreen = ApplicationServices.GetService<LoadingScreen>();
+
+            _displayUtilsService.OnSafeAreaChanged += OnSafeAreaChanged;
 
             _authorizationStateService.OnUpdate += OnUserUpdate;
             _authorizationStateService.OnLogout += OnLogout;
@@ -79,6 +83,14 @@ namespace VARTube.UI
                 //ShowPreloader(true);
                 await _controller.Load();
             }
+            else
+                await _controller.Preload();
+
+        }
+
+        private void OnSafeAreaChanged(ScreenOrientation orientation, Rect rect, DisplayUtils.EdgeInsets insets)
+        {
+            _controller.SetSafeArea(_displayUtilsService.GetSafeInsetsJson()).Forget();
         }
 
         private void OnActionRequest(ActionType actionType)

@@ -19,6 +19,7 @@ public class ApplicationServicesInstaller
     private DefaultFactory _defaultFactory;
     private IntervalActionService _intervalActionService;
     private ThreadDispatcherService _threadDispatcherService;
+    private DisplayUtils _displayUtilsService;
     private readonly Transform _parent;
 
     public ApplicationServicesInstaller(DefaultFactory DefaultFactory, Transform parent)
@@ -31,6 +32,9 @@ public class ApplicationServicesInstaller
 
         _threadDispatcherService = new GameObject("ThreadDispatcherService").AddComponent<ThreadDispatcherService>();
         _threadDispatcherService.transform.SetParent(_parent, false);
+
+        _displayUtilsService = new GameObject("DisplayUtilsService").AddComponent<DisplayUtils>();
+        _displayUtilsService.transform.SetParent(_parent, false);
     }
 
     public void Install(ApplicationConfigExtended config)
@@ -44,6 +48,7 @@ public class ApplicationServicesInstaller
         ApplicationServices.RegisterSingleton<ApplicationConfigExtended>(config);
         ApplicationServices.RegisterSingleton(_intervalActionService);
         ApplicationServices.RegisterSingleton(_threadDispatcherService);
+        ApplicationServices.RegisterSingleton(_displayUtilsService);
         ApplicationServices.RegisterSingleton<NetworkService>();
         ApplicationServices.RegisterSingleton<AuthorizationService>();
         ApplicationServices.RegisterSingleton<AuthorizationStateService>();
