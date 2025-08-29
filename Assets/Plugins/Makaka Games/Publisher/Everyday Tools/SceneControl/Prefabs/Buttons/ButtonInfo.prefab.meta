@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 81ae98aa5f9574e409c61f0e365aaf27
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 191073
+  packageName: AR Camera Gyroscope and Accelerometer
+  packageVersion: 5.0
+  assetPath: Assets/Makaka Games/Publisher/Everyday Tools/SceneControl/Prefabs/Buttons/ButtonInfo.prefab
+  uploadId: 646210

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: f982e10f719ce42ca8d00c7d7814f407
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 191073
+  packageName: AR Camera Gyroscope and Accelerometer
+  packageVersion: 5.0
+  assetPath: Assets/Makaka Games/Publisher/Everyday Tools/SceneControl/Scripts/CacheControl.cs
+  uploadId: 646210

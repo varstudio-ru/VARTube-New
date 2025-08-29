@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a7663443e17034ed18eae93174d80043
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 191073
+  packageName: AR Camera Gyroscope and Accelerometer
+  packageVersion: 5.0
+  assetPath: Assets/Makaka Games/Camera/Sensor Camera/Scenes/Menu_SensorCamera/LightingData.asset
+  uploadId: 646210
